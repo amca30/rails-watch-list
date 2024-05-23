@@ -1,0 +1,21 @@
+.btn-rounded {
+  border-radius: 50px;
+  background-color: #89023e;
+  transition:0.3s ease;
+  // color: black;
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+  }
+
+}
+
+.btn-rounded:hover {
+  background-color: white;
+  border:1px solid #89023e;
+
+  a{
+    color:#89023e;
+  }
+}

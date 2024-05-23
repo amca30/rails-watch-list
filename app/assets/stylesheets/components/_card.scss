@@ -1,6 +1,6 @@
 .card-product {
 
-  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("https://images.unsplash.com/photo-1538151790645-80dd86cda1ce?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-color: #1b2021;
   overflow: hidden;
   height: 300px;
   background-size: cover;
@@ -9,28 +9,31 @@
   display: flex;
   align-items: center;
   object-fit: cover;
-}
+  border-radius: 10px;
+  transition: 0.3s ease;
+  color:black;
+  &:hover {
+    opacity: 70%;
+  }
 
+  a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2em;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  // &:hover {
+  //   color: black;
+  // }
+
+}
+}
 // .card-product img {
 //   height: 100%;
 //   width: 120px;
 //   object-fit: cover;
 // }
-
-.card-product h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.card-product p {
-  font-size: 12px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
-}
-
-.card-product .card-product-infos {
-  padding: 16px;
-}
+// .card-product-info {
+//   text-decoration: none;
+//   color: white;
+// }

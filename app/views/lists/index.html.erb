@@ -1,6 +1,6 @@
-<div class="container-fluid align-items-center">
+<div class="container-fluid align-items-center mx-auto">
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=2825&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);">
-  <div class="container align-items-center">
+  <div class="container mx-auto text-center">
     <h1>Movie Lists</strong></h1>
     <p>Welcome and enjoy creating lists of movies</p>
   </div>
@@ -10,15 +10,17 @@
 
 <div class="container d-flex flex-wrap mt-5 justify-content-center col-12">
 <% @lists.each do |list| %>
-<div class="card-product p-5 m-4 text-decoration-none " style="width: 450px">
-  <div class="card-product-infos">
-<li class="list-unstyled"><%= link_to list.name, list_path(list) %></li>
+<div class="card-product p-5 m-4" style="width: 450px">
+  <div class="card-product-infos mx-auto text-white">
+<li class="list-unstyled">
+<h4>
+<%= link_to list.name, list_path(list) %></li>
+</h4>
   </div>
 </div>
 <%end%>
-</ul>
 </div>
-<ul>
 
-
-<%= link_to "Add a list", new_list_path(@list) %>
+<div class="container btn-rounded col-2 p-2 text-center mx-auto my-5">
+<%= link_to "Add a list", new_list_path(@list)%>
+</div>
