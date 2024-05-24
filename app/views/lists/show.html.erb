@@ -1,6 +1,7 @@
 <h1>Lists#show</h1>
 <p>Find me in app/views/lists/show.html.erb</p>
 <%= @list.name %>
+<%# <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %> %>
 <ul>
 <% @list.bookmarks.each do |bookmark| %>
 <li>

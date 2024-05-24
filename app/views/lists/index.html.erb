@@ -8,17 +8,24 @@
 
 </div>
 
+
+
+
+
 <div class="container d-flex flex-wrap mt-5 justify-content-center col-12">
-<% @lists.each do |list| %>
-<div class="card-product p-5 m-4" style="width: 450px">
-  <div class="card-product-infos mx-auto text-white">
-<li class="list-unstyled">
-<h4>
-<%= link_to list.name, list_path(list) %></li>
-</h4>
+    <% @lists.each do |list| %>
+      <div class="card-category p-5 m-4" style="width: 450px">
+  <%# <div class="card-product-infos mx-auto text-white img-fluid"> %>
+  <% if list.photo.attached?  %>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path list.photo.key%>)">
+      <li class="list-unstyled">
+      <h4><%= link_to list.name, list_path(list) %></li></h4>
+</div>
+  <%end %>
   </div>
 </div>
 <%end%>
+
 </div>
 
 <div class="container btn-rounded col-2 p-2 text-center mx-auto my-5">
